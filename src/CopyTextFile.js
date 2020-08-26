@@ -9,11 +9,10 @@ async function start() {
     "UTF-8"
   );
   const lines = data.split(/\r?\n/);
-  await delay(5000);
+  await delay(3000);
   lines.forEach((line) => {
     robot.typeString(line);
     robot.keyTap("enter");
-    await delay(100);
   });
   console.log("Fin");
 }
