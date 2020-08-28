@@ -3,11 +3,14 @@ const robot = require("robotjs");
 async function start() {
   console.log("Start");
   robot.setMouseDelay(2);
-  let mouse = robot.getMousePos();
+
+  //let mouse = robot.getMousePos();
+  var screenSize = robot.getScreenSize();
+  var screenMiddle = { x: screenSize.width / 2, y: screenSize.height / 2 };
 
   while (true) {
-    for (let x = mouse.x; x < mouse.x+100; x++) {
-      robot.moveMouse(x, mouse.y);
+    for (let x = screenMiddle.x - 50; x < screenMiddle.x+50; x++) {
+      robot.moveMouse(x, screenMiddle.y);
     }
     await delay(10000);
   }
