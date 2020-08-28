@@ -18,6 +18,7 @@
         "no-console":"off",
         "no-await-in-loop":"off",
         "no-plusplus":"off",
-        "no-constant-condition":"off"
+        "no-constant-condition":"off",
+        "linebreak-style":"off"
     }
 }

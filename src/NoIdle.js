@@ -1,12 +1,5 @@
 const robot = require('robotjs');
-
-function delay(delayInms) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(2);
-    }, delayInms);
-  });
-}
+const utils = require('./utils');
 
 async function start() {
   console.log('Start');
@@ -20,7 +13,7 @@ async function start() {
     for (let x = screenMiddle.x - 50; x < screenMiddle.x + 50; x++) {
       robot.moveMouse(x, screenMiddle.y);
     }
-    await delay(10000);
+    await utils.delay(10000);
   }
 }
 

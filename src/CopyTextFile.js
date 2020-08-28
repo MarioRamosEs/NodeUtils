@@ -1,14 +1,7 @@
 const robot = require('robotjs');
 const fs = require('fs');
 const path = require('path');
-
-function delay(delayInms) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(2);
-    }, delayInms);
-  });
-}
+const utils = require('./utils');
 
 async function start() {
   console.log('Start');
@@ -17,7 +10,7 @@ async function start() {
     'UTF-8',
   );
   const lines = data.split(/\r?\n/);
-  await delay(3000);
+  await utils.delay(3000);
   lines.forEach((line) => {
     robot.typeString(line);
     robot.keyTap('enter');
