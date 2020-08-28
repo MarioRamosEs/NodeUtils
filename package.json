@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "CopyTextFile": "node ./src/CopyTextFile.js",
+    "NoIdle": "node ./src/NoIdle.js"
   },
   "keywords": [],
   "author": "",

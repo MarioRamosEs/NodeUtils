@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 async function start() {
-  console.log("Inicio");
+  console.log("Start");
   const data = fs.readFileSync(
     path.resolve(__dirname, "../data/text.txt"),
     "UTF-8"
@@ -14,7 +14,7 @@ async function start() {
     robot.typeString(line);
     robot.keyTap("enter");
   });
-  console.log("Fin");
+  console.log("End");
 }
 
 function delay(delayInms) {
