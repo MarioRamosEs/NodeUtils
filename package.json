@@ -4,13 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "CopyTextFile": "node ./src/CopyTextFile.js",
-    "NoIdle": "node ./src/NoIdle.js"
+    "copyTextFile": "node ./src/CopyTextFile.js",
+    "noIdle": "node ./src/NoIdle.js",
+    "lint": "eslint --fix ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "robotjs": "^0.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
   }
 }
