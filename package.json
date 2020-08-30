@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "copyTextFile": "node ./src/CopyTextFile.js",
-    "noIdle": "node ./src/NoIdle.js",
+    "copyTextFile": "node ./src/copyTextFile.js",
+    "noIdle": "node ./src/noIdle.js",
     "lint": "eslint --fix ."
   },
   "keywords": [],
