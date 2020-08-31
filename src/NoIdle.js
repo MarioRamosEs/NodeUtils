@@ -8,13 +8,17 @@ async function start() {
   // let mouse = robot.getMousePos();
   const screenSize = robot.getScreenSize();
   const screenMiddle = { x: screenSize.width / 2, y: screenSize.height / 2 };
+  robot.moveMouse(screenMiddle.x, screenMiddle.y);
 
-  while (true) {
+  // If you move the cursor vertically, the script ends
+  while (robot.getMousePos().y === screenMiddle.y) {
     for (let x = screenMiddle.x - 50; x < screenMiddle.x + 50; x++) {
       robot.moveMouse(x, screenMiddle.y);
     }
     await utils.delay(10000);
   }
+
+  console.log('End');
 }
 
 start();
