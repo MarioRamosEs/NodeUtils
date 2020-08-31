@@ -15,7 +15,10 @@ async function start() {
     for (let x = screenMiddle.x - 50; x < screenMiddle.x + 50; x++) {
       robot.moveMouse(x, screenMiddle.y);
     }
-    await utils.delay(10000);
+    for (let x = screenMiddle.x + 50; x > screenMiddle.x - 50; x--) {
+      robot.moveMouse(x, screenMiddle.y);
+    }
+    await utils.delay(1000);
   }
 
   console.log('End');
