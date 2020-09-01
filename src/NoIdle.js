@@ -4,6 +4,7 @@ const utils = require('./utils');
 async function start() {
   console.log('Start');
   robot.setMouseDelay(2);
+  await utils.delay(3000);
 
   // let mouse = robot.getMousePos();
   const screenSize = robot.getScreenSize();
@@ -15,6 +16,7 @@ async function start() {
     for (let x = screenMiddle.x - 50; x < screenMiddle.x + 50; x++) {
       robot.moveMouse(x, screenMiddle.y);
     }
+    await utils.delay(1000);
     for (let x = screenMiddle.x + 50; x > screenMiddle.x - 50; x--) {
       robot.moveMouse(x, screenMiddle.y);
     }
